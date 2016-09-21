@@ -3,22 +3,32 @@
         <div class="footer-wrapper">
         <div class="footer-main">
             <ul>
-                <li><a href="#">Visit</a></li>
-                <li><a href="">Sermons</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="{{site.url}}welcome.html">Visit</a></li>
+                <li><a href="{{site.url}}sermons.html">Sermons</a></li>
+                <li><a href="{{site.url}}gallery.html">Gallery</a></li>
+                <li><a href="{{site.url}}blog-list.html">Blog</a></li>
+                <li><a href="{{site.url}}contact.php">Contact</a></li>
             </ul>
             <p>{{site.data.home[0].Intro_Text}}  <a href="{{site.url}}welcome.html">Visit this Sunday.</a></p>
         </div><!--/main footer-->
         <div class="footer-contact">
-        <p class="logo">Community Baptist Church</p>
+        {% if  site.data.info[0].Church_Logo %}
+        <img src="{{site.data.info[0].Church_Logo[0].url}}" alt="">
+        <hr>
+        {% else %}
+        <h3>{{site.data.info[0].Church_Name}}</h3>
+        <hr>
+        {% endif %}
+        
         <ul>
-            <li><a href="#"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a></li>
-            <li><a href="#"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a></li>
-            <li><a href="#"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x"></i></span></a></li>
+            {% if  site.data.contact[0].Facebook %}
+            <li><a href="{{site.data.contact[0].Facebook}}"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a></li>{% endif %}
+            {% if  site.data.contact[0].Twitter %}
+            <li><a href="{{site.data.contact[0].Twitter}}"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x"></i></span></a></li>{% endif %}
+             {% if  site.data.contact[0].Youtube %}
+            <li><a href="{{site.data.contact[0].Youtube}}"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x"></i></span></a></li>{% endif %}
             <li><a href="#"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-rss fa-stack-1x"></i></span></a></li>
-            <li><a href="#"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-gear fa-stack-1x"></i></span></a></li>
+            <li><a href="http://airtable.com"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-gear fa-stack-1x"></i></span></a></li>
         </ul>
             
         </div><!--/footer-contact-->

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     {% if  page.title %}
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} • {{ site.data.info[0].Church_Name}}</title>
     {% else %}
-    <title>{{site.title}}</title>
+    <title>{{ site.data.info[0].Church_Name}}</title>
     {% endif %}
      <link href='//fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
       <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>

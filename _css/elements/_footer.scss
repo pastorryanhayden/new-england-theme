@@ -67,31 +67,15 @@ footer {
 		
 	}
 
-	p.logo {
-		background: url(logo.png) no-repeat;
-		text-indent: -4000px;
-		width: 200px;
-		height: 60px;
-		background-size: contain;
-		margin-top: em(30);
-		padding-bottom: 4px;
-		margin-bottom: 4px;
-		border-bottom: 1px solid $medium-gray;
-	@include breakpoint (small down) {
-		margin-left: em(30);
-	}	
-	}
 
 	ul {
 		display: flex;
 		justify-content: space-between;
 		width: 200px;
 		list-style-type: none;
-		margin-left: 0;
-		margin-bottom: em(30);
-		@include breakpoint (small down) {
-		margin-left: em(30);
-	}	
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: em(30);	
 	}
 
 	ul li a {

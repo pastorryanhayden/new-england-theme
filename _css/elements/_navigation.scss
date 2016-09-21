@@ -30,6 +30,7 @@ nav.main-navigation ul.navigation {
 	text-transform: uppercase;
 	font-family: $header-font-family;
 	color: $medium-gray;
+	position: relative;
 	}
 
 	}
@@ -42,17 +43,29 @@ nav.main-navigation ul li.dropdown > a:after {
 }
 
 nav.main-navigation ul ul {
-	display: none;
+	// display: none;
+	width: 0;
+	visibility:hidden;
 	list-style-type: none;
 	margin-left: 0;
+	opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transition:200ms ease;
+    -moz-transition:200ms ease;
+    -o-transition:200ms ease;
+    transition:200ms ease;
 
 }
 
 nav.main-navigation ul li:hover ul {
-	display: block;
+	// display: block;
+	visibility:visible;
 	background: $dark-gray;
 	z-index:50;
-	position: relative;
+	width: inherit;
+	position: absolute;
+	opacity:1;
+    filter:alpha(opacity=100);
 
 
 }
@@ -298,6 +311,7 @@ div.logo {
 
 	flex-basis: 1000px;
 	flex-shrink: 2;
+	align-self: center;
 }
 
 div.logo a {
@@ -311,7 +325,7 @@ div.logo a {
 	background: url(../logo.png); 
 	background-size: cover;
 	width: 210px;
-	height: 53px;
+	height: 67px;
 	line-height: 53px;
 	display: block;
 	cursor: pointer;
@@ -324,6 +338,7 @@ div.logo a {
 	/*float: right;*/
 	display: flex;
 	flex-shrink: 0;
+	align-items: center;
 
 		@include breakpoint(small down) {
 		float: none;
@@ -333,16 +348,20 @@ div.logo a {
 	}
 }
 
-.InfoHeader__info__ServiceTimes, .InfoHeader__info__ContactInfo {
-	align-self: center; 
-}
-
 .InfoHeader__info__ServiceTimes ul{
 	border-right: 1px solid $medium-gray;
 	padding-right: 24px;
 	list-style-type: none;
 	margin-left: 0;
 	margin-bottom: 0;
+
+
+}
+
+.InfoHeader__info__ContactInfo {
+	display: flex;
+	flex-direction: column; 
+	justify-content: center;      
 }
 
 .InfoHeader__info__ContactInfo ul {
@@ -350,7 +369,7 @@ div.logo a {
 	list-style-type: none;
 	margin-left: 0;
 	margin-bottom: 0;
-}
+} 
 
 .InfoHeader__info__ContactInfo ul li:nth-child(3) {
 	padding-left: 10px;

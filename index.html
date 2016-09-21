@@ -1,6 +1,20 @@
 ---
 layout: default
 ---
+{% if  site.data.home[0].Main_Image %}
+<style>
+    div.hero {
+    background: linear-gradient(
+        rgba(117,136,163,0.8),
+        rgba(117,136,163,0.8)
+    ),
+    url({{site.data.home[0].Main_Image[0].url}}) no-repeat top center;
+    min-height: 30vh; 
+    background-size: cover;
+    padding-top: 50px;
+}
+</style>
+{% else %}
 <style>
     div.hero {
     background: url({{site.default_hero_image}}) no-repeat top center;
@@ -9,10 +23,11 @@ layout: default
     padding-top: 50px;
 }
 </style>
+{% endif %}
 
  <div class="hero">
             <div class="hero-content">
-                <h2>Exalting Christ and seeing Him change lives in Riverhead since 2010.</h2>
+                <h3>{{site.data.home[0].Intro_Heading}}</h3>
                 <div class="buttons">
                 <a href="{{site.url}}welcome.html" class="button">Plan A Visit</a>
                 <a href="{{site.url}}contact-us.html" class="button">Get In Touch</a>
