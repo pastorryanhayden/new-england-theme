@@ -1,14 +1,14 @@
 //  Foundation for Sites Settings
 //  -----------------------------
-@import '../bower_components/foundation-sites/scss/util/util';
+@import '../../bower_components/foundation-sites/scss/util/util';
 
 
 // 1. FONTS
 // To Change the fonts 
 // a. add the @import rule here: (get this from Google Fonts)
-@import url(https://fonts.googleapis.com/css?family=Lusitana:400,700);
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic);
-@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700,800,700italic,800italic);
+@import url('https://fonts.googleapis.com/css?family=Lusitana:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic');
+@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700,800,700italic,800italic');
 // b. Change these variables.
 $body-font-family:'Merriweather Sans', sans-serif;
 $header-font-family: 'Lusitana', serif;

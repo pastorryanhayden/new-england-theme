@@ -115,12 +115,6 @@ article.main {
 			@include grid-column(12);
 
 			border-right: none;
-
-			article {
-				width: 400px;
-				margin-left: auto;
-				margin-right: auto;
-			}
 		}
 
 		h2 {
@@ -324,4 +318,4 @@ article.main {
 	h4 a {
 		color: $dark-gray;
 	}
-}
+} 
